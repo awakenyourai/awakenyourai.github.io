@@ -1,0 +1,123 @@
+:root {
+    --accent-color: #00ff88;
+    --bg-dark: #0a0a0a;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+    /* Remove background color from body to prevent it covering the slideshow */
+    background-color: transparent; 
+    color: white;
+    overflow-x: hidden;
+}
+
+/* 1. Slideshow Container - Set to the very bottom */
+#slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Moved further back */
+    background-color: #000; /* If images fail, show black */
+}
+
+.slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+/* 2. Hero Section - The "floating" layer */
+.hero {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    /* Gradient from solid black on left to transparent on right */
+    background: linear-gradient(to right, rgba(10,10,10,1) 0%, rgba(10,10,10,0) 100%);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 60px; /* Slightly larger for visibility */
+    width: auto;
+}
+
+h1 { font-size: 3rem; margin: 0; }
+p { font-size: 1.1rem; line-height: 1.6; color: #ccc; max-width: 500px; }
+
+/* 3. The Copy Button */
+.copy-btn {
+    align-self: flex-start;
+    padding: 12px 24px;
+    margin-top: 25px;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* 4. Below the fold - Solid background to cover images */
+.scroll-section {
+    position: relative;
+    z-index: 10;
+    padding: 80px 5%;
+    background-color: var(--bg-dark); /* Solid black starts here */
+    min-height: 100vh;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    background: #151515;
+    color: #00ff88;
+    padding: 20px;
+    border: 1px solid #333;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+}
+
+#attribution {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    font-size: 11px;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+#attribution a { color: var(--accent-color); text-decoration: none; }
+

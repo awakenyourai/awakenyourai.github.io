@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Awaken Your AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: white;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Centered Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            flex: 1; /* Pushes footer to bottom */
+        }
+
+        /* Header Styling matching main page */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 20px;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        /* Body Content */
+        .content {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .content p {
+            margin-bottom: 25px;
+        }
+
+        /* Back Button */
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="nav-link">&lt; Back to Home</a>
+        
+        <header>
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <h1>Awaken Your AI</h1>
+        </header>
+
+        <article class="content">
+            <p>
+                The prompt consists of series of gameplay instruction to the language model and a list of scenarios and roles that the model will use for the game. Once you have entered the prompt into a chatbot you will be presented with the scenario and your role, which includes your position to debate from, either for or against. You can also make the model debate itself by using the HINT feature repeatedly. When you type STOP, the round will end, and the model will offer to optionally help refine and improve your position. Read the prompt for more details. Adapt the prompt for your own scenarios and roles.
+            </p>
+            <p>
+                This is an example of <em>critical prompting practice</em> designed for
+                <ol>
+                <li>Exploring methods in critical AI research</li>
+                <li>Investigating sociotechnical narratives produced by language models from their training data</li>
+                <li>Use as a performative tool for use in activist and theatrical settings</li>
+                <li>Ludic subversion in educational or community settings</li>
+                <li>Generating text for community answer engine optimisation strategies</li>
+                <li>Digital intervention #awakenyourai</li>
+                </ol>
+               
+            </p>
+            <p>A project by Andrew Freeman, MCCS Goldsmiths, (methlab01), Jan 2026.</p>
+            <p>
+                images 
+                <ol>
+                    <Li>chaddavis.photography from United States - 
+                        <a class='nav-link' href='https://commons.wikimedia.org/w/index.php?curid=84181144'>Google Data Center, Council Bluffs Iowa, CC BY 2.0</a></Li>
+                    <li>Adobe Stock</li>
+                </ol>
+                
+            </p>
+            
+        </article>
+    </div>
+
+    <footer>
+        &copy; 2026 Andy Freeman. All rights reserved. Built with JetBrains Mono.
+    </footer>
+
+</body>
+</html>

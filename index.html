@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Awaken Your AI - methlab 01, Goldsmiths MCCS 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    test
+
+    <div id="slideshow"></div>
+
+    <section class="hero">
+        <div class="title-container">
+            <h1>Awaken Your AI</h1>
+            <img src="img/logo.png" alt="Logo" class="logo">
+            
+        </div>
+        <p>A role playing game about the future of AI</p>
+        <p>Press the button below to copy the prompt. Paste into a chatbot to play.</p>
+        <button class="copy-btn" id="copyBtn">Copy Prompt</button>
+        <button class="copy-btn" id="aboutBtn">About</button>
+    </section>
+
+    <section class="scroll-section">
+        <h2>Prompt</h2>
+        <textarea id="myTextArea">
+
+        </textarea>
+        <button class="copy-btn" id="copyBtn">Copy Prompt</button>
+        <button class="copy-btn" id="aboutBtn">About</button>
+    </section>
+
+    <div id="attribution"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
